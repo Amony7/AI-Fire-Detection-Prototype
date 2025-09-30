@@ -180,6 +180,20 @@ for cap in caps: cap.release()
 cv2.destroyAllWindows()
 
 ```
+### 🚀 Deployment 
+#### Deploying the model into ONNX format 
+```
+from ultralytics import YOLO
+
+# Loading the model
+model = YOLO("runs/detect/train5/weights/best.pt")
+
+# Exporting the model
+model.export(format="onnx")
+
+```
+
+
 ### Alerts and Dashboard
 #### This is what the Dashboard looks like with all 10 cameras and the logged alerts.
 
